@@ -46,8 +46,26 @@
     background-size: no-repeat;
     padding-bottom: 200px;
   }
+  &--wave-bottom-lightblue {
+    background: url('../images/wave_bottom_lightblue.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
+  &--wave-bottom-red {
+    background: url('../images/wave_bottom_red.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
   &--wave-bottom-offset {
     background-position: 0 101%;
+  }
+  &--wave-bottom-blue,
+  &--wave-bottom-orange,
+  &--wave-bottom-purple {
+    // Stretches waves to fit ultrawides / super zoomed out
+    @media screen and (min-width: $BP_XL) {
+      background-size: contain;
+    }
   }
   &--fullheight {
     height: 100%;
@@ -175,6 +193,17 @@ img.logo {
       text-decoration: none;
       background-color: $ORANGE_1;
       color: $WHITE;
+    }
+  }
+}
+
+.xx-footer {
+  .xx-tesc {
+    width: 100px;
+    display: inline-block;
+
+    img {
+      width: 100%;
     }
   }
 }
