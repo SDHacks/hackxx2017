@@ -1,13 +1,68 @@
 .xx-section {
+  padding-top: 20px;
+  color: $WHITE;
+  padding-bottom: 40px;
+
+  &--wrapper {
+    position: relative;
+  }
+  &--header {
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+  }
+  &--about {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  &--purple {
+    background-color: $PURPLE_1;
+  }
+  &--red {
+    background-color: $RED_1;
+  }
+  &--lightblue {
+    background-color: $BLUE_2;
+  }
+  &--blue {
+    background-color: $BLUE_3;
+  }
+  &--orange {
+    background-color: $ORANGE_1;
+  }
+  &--wave-bottom-blue {
+    background: url('../images/wave_bottom.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
+  &--wave-bottom-orange {
+    background: url('../images/wave_bottom_oj.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
+  &--wave-bottom-purple {
+    background: url('../images/wave_bottom_purple.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
+  &--wave-bottom-offset {
+    background-position: 0 101%;
+  }
   &--fullheight {
     height: 100%;
     height: 100vh;
-  }
 
+    @media screen and (min-width: $BP_MD) {
+      max-height: 1000px;
+    }
+    @media screen and (max-width: $BP_MD) {
+      padding-bottom: 60px;
+    }
+  }
 }
+
 .xx-hero {
-  background: url('../images/wave_bottom.png') no-repeat center 100%;
-  background-size: no-repeat;
   color: $WHITE;
 
   h4 {
@@ -23,11 +78,13 @@
     color: $BLUE_3;
   }
 }
+
 .vertical-center {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+
 .xx-logo {
   &--text,
   &--text>* {
@@ -47,5 +104,76 @@
   }
   &--orange {
     color: $ORANGE_1;
+  }
+}
+
+img.logo {
+  @media screen and (max-width: $BP_MD) {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.xx-faq {
+  &--question {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  &--answer {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+}
+
+.xx-email-form {
+  h6 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .mc-field-group {
+    display: inline-block;
+
+    @media screen and (max-width: $BP_MD) {
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+  }
+  input[type="email"] {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    color: $BLUE_3;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.xx-btn {
+  &.btn-default {
+    background-color: $ORANGE_1;
+    color: $WHITE;
+    border: none;
+    outline: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+
+    @media screen and (max-width: $BP_MD) {
+      display: block;
+      width: 90%;
+      margin: auto;
+    }
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      text-decoration: none;
+      background-color: $ORANGE_1;
+      color: $WHITE;
+    }
   }
 }
