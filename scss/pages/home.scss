@@ -1,7 +1,7 @@
 .xx-section {
   padding-top: 20px;
   color: $WHITE;
-  padding-bottom: 40px;
+  padding-bottom: 50px;
 
   &--wrapper {
     position: relative;
@@ -31,6 +31,12 @@
   &--orange {
     background-color: $ORANGE_1;
   }
+  &--white {
+    background-color: $WHITE_1;
+  }
+  &--text-dark {
+    color: $BLUE_3;
+  }
   &--wave-bottom-blue {
     background: url('../images/wave_bottom.png') no-repeat center 101%;
     background-size: no-repeat;
@@ -56,12 +62,18 @@
     background-size: no-repeat;
     padding-bottom: 200px;
   }
+  &--wave-bottom-white {
+    background: url('../images/wave_bottom_white.png') no-repeat center 101%;
+    background-size: no-repeat;
+    padding-bottom: 200px;
+  }
   &--wave-bottom-offset {
     background-position: 0 101%;
   }
   &--wave-bottom-blue,
   &--wave-bottom-orange,
-  &--wave-bottom-purple {
+  &--wave-bottom-purple,
+  &--wave-bottom-white {
     // Stretches waves to fit ultrawides / super zoomed out
     @media screen and (min-width: $BP_XXL) {
       background-size: contain;
@@ -225,6 +237,10 @@ img.logo {
       font-size: 18px;
     }
   }
+}
+
+.xx-sponsor {
+  max-width: 300px;
 }
 
 .xx-footer {
