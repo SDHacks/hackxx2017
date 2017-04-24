@@ -10,7 +10,7 @@
     font-size: 48px;
     text-transform: uppercase;
     letter-spacing: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
   &--about {
     font-size: 18px;
@@ -63,7 +63,7 @@
   &--wave-bottom-orange,
   &--wave-bottom-purple {
     // Stretches waves to fit ultrawides / super zoomed out
-    @media screen and (min-width: $BP_XL) {
+    @media screen and (min-width: $BP_XXL) {
       background-size: contain;
     }
   }
@@ -136,7 +136,7 @@ img.logo {
 .xx-faq {
   &--question {
     font-size: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   &--answer {
     font-size: 18px;
@@ -172,19 +172,21 @@ img.logo {
 }
 
 .xx-btn {
-  &.btn-default {
-    background-color: $ORANGE_1;
-    color: $WHITE;
+  &.btn-default,
+  &.btn-primary {
     border: none;
     outline: none;
     padding: 8px 20px;
     border-radius: 8px;
-
-    @media screen and (max-width: $BP_MD) {
-      display: block;
-      width: 90%;
-      margin: auto;
-    }
+  }
+  @media screen and (max-width: $BP_MD) {
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  &.btn-primary {
+    background-color: $ORANGE_1;
+    color: $WHITE;
 
     &:hover,
     &:focus,
@@ -193,6 +195,34 @@ img.logo {
       text-decoration: none;
       background-color: $ORANGE_1;
       color: $WHITE;
+    }
+    &:hover {
+      background-color: lighten($ORANGE_1, 5%);
+    }
+  }
+  &.btn-default {
+    background-color: $BLUE_3;
+    color: $WHITE;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      text-decoration: none;
+      background-color: $BLUE_3;
+      color: $WHITE;
+    }
+  }
+  &.btn-lg {
+    margin: 3px;
+    padding: 12px 40px;
+    border-radius: 10px;
+    font-size: 22px;
+
+    @media screen and (max-width: $BP_MD) {
+      padding: 8px 24px;
+      margin-bottom: 8px;
+      font-size: 18px;
     }
   }
 }
