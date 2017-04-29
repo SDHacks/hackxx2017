@@ -191,11 +191,6 @@ img.logo {
     padding: 8px 20px;
     border-radius: 8px;
   }
-  @media screen and (max-width: $BP_MD) {
-    display: block;
-    width: 90%;
-    margin: auto;
-  }
   &.btn-primary {
     background-color: $ORANGE_1;
     color: $WHITE;
@@ -236,6 +231,13 @@ img.logo {
       margin-bottom: 8px;
       font-size: 18px;
     }
+  }
+  @media screen and (max-width: $BP_MD) {
+    display: block;
+    width: 90%;
+    margin: auto;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
