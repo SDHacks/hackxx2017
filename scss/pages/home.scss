@@ -204,7 +204,7 @@ img.logo {
       color: $WHITE;
     }
     &:hover {
-      background-color: lighten($ORANGE_1, 5%);
+      background-color: lighten($ORANGE_1, 4%);
     }
   }
   &.btn-default {
@@ -218,6 +218,9 @@ img.logo {
       text-decoration: none;
       background-color: $BLUE_3;
       color: $WHITE;
+    }
+    &:hover {
+      background-color: lighten($BLUE_3, 8%);
     }
   }
   &.btn-lg {
