@@ -11,7 +11,16 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 24px;
+
+    @media screen and (max-width: $BP_SM) {
+      font-size: 36px;
+    }
   }
+  &--subheader {
+    line-height: 40px;
+    font-size: 26px;
+  }
+
   &--about {
     font-size: 18px;
     line-height: 1.6;
@@ -245,10 +254,35 @@ img.logo {
 }
 
 .xx-sponsor {
-  max-width: 330px;
-  max-height: 132px;
+  max-width: 230px;
+  max-height: 96px;
   vertical-align: middle;
   padding: 20px;
+
+  &--big {
+    max-width: 330px;
+    max-height: 132px;
+  }
+}
+
+.xx-schedule {
+  &--header {
+    margin-bottom: 14px;
+
+    @media screen and (max-width: $BP_SM) {
+      margin-top: 30px;
+      margin-bottom: 4px;
+    }
+  }
+  &--row {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 8px 0;
+
+    @media screen and (min-width: $BP_MD) {
+      line-height: 22px;
+    }
+  }
 }
 
 .xx-footer {
