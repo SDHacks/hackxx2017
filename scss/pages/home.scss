@@ -1,3 +1,18 @@
+.nav {
+  margin-top: 20px;
+
+  a {
+    color: $BLUE_3;
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-right: 14px;
+
+    &.active {
+      text-decoration: underline;
+    }
+  }
+}
+
 .xx-section {
   padding-top: 20px;
   color: $WHITE;
@@ -250,6 +265,47 @@ img.logo {
     margin: auto;
     margin-left: auto !important;
     margin-right: auto !important;
+  }
+}
+
+.xx-card {
+  .card-block {
+    background: white;
+    border-radius: 14px;
+    margin-bottom: 22px;
+
+    a {
+      display: block;
+      padding: 14px 20px;
+      color: $ORANGE_1;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: none;
+      }
+    }
+    &:not(.disabled) {
+      &:hover {
+        cursor: pointer;
+        border: 3px solid $BLUE_3;
+        margin: -3px -3px 19px -3px;
+
+        a {
+          color: $BLUE_3;
+        }
+      }
+    }
+    &.disabled {
+      background-color: $GRAY_2;
+
+      &:hover {
+        cursor: not-allowed;
+      }
+      a {
+        color: $GRAY_1;
+      }
+    }
   }
 }
 
